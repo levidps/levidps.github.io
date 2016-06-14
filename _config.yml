@@ -3,14 +3,18 @@
 # 
 
 # Site settings
-title: Levi Schmidt - Digital Design
-email: levidps@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Traditional design gone digital, embracing a world of self exploration and personal development.
+title: Watts Studio
+email: felicity@wattsstudio.com.au
+description: > 
+  Modern, elegant and highly refined spaces designed to suit every individual.
+phone: "0487 496 567"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://levischmidt.com" # the base hostname & protocol for your site
-twitter_username: levidps
-github_username:  levidps
+url: "http://wattsstudio.com" # the base hostname & protocol for your site
+
+# Site Credits
+credit_text: The View From Here
+credit_link: http://www.theviewfromhere.com.au
+
 
 # Build settings
 markdown: kramdown

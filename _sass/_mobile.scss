@@ -1,0 +1,59 @@
+/***********************
+	RESPONSIVE STYLING 
+***********************/
+
+@media only screen and (max-width: $laptop ) {
+
+	body {
+	    font: $base-font-weight #{$base-font-size - 3}/#{$base-line-height} $base-font-family;
+		padding: 2em;
+		height: calc( 100vh - 4em);
+	}
+
+	h3 {
+		max-width: 200px;
+	}
+
+	.logo {
+
+		svg {
+			max-width: 75%;
+		}
+
+		&-square {
+
+			svg {
+				max-width: 100%;
+			}
+
+		}
+
+	}
+
+	#slider {
+		width: auto;
+		min-width: 900px;
+	}
+
+}
+
+@media only screen and (max-width: $palm) {
+
+	.logo {
+		width: 100%;
+
+		svg {
+			max-width: 50%;
+		}
+
+		&-square {
+
+			svg {
+				max-width: 100%;
+			}
+
+		}
+
+	}
+
+}
