@@ -10,6 +10,8 @@ description: >
 phone: "0487 496 567"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://wattsstudio.com" # the base hostname & protocol for your site
+facebook: "https://www.facebook.com/wattsstudiomelbourne/"
+instagram: "https://www.instagram.com/watts.studio/"
 
 # Site Credits
 credit_text: The View From Here

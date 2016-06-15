@@ -25,7 +25,8 @@ body {
 }
 
 h1 {
-    display: none;
+    height: 0;
+    text-indent: -1000px;
 }
 
 h2 {
@@ -129,7 +130,6 @@ ul {
     }
 }
 
-
 .logo {
     max-width: 250px;
     display: block;
@@ -175,6 +175,32 @@ ul {
         }
 
     }
+}
+
+.social-links {
+    position: relative;
+    z-index: 50;
+    bottom: -3px;
+    left: 2%;
+
+    svg {
+        width: 1.825em;
+        height: 1.825em;
+        color: $text-color;
+        opacity: 1;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+
+        &:hover {
+            opacity: .6;
+        }
+
+    }
+
+    li {
+        line-height: 1em;
+    }
+
 }
 
 .watts-graphic {
