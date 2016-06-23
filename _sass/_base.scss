@@ -23,6 +23,8 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
 }
 
 
@@ -91,11 +93,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: inherit;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: inherit;
     }
 
     &:hover {

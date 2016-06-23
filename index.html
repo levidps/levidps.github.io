@@ -4,37 +4,10 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+<div class="face">
+	<h1>^_^</h1>
+	<span class="face-text"><p>happy</p></span>
+</div>
 
-    <ul class="page-list">
-        {% for my_page in site.pages %}
-          
-          {% if my_page.title %}
-          <li>
-            <span>{{ my_page.random }}</span>
-            <h2>
-              <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-            </h2>
-          </li>
-          {% endif %}
-
-
-        {% endfor %}
-    </ul>
-
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
