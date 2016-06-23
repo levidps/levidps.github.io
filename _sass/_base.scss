@@ -95,14 +95,16 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: inherit;
     text-decoration: none;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    display: inline-block;
 
     &:visited {
         color: inherit;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: inherit;
     }
 }
 

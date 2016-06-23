@@ -72,6 +72,47 @@
     visibility: visible;
     opacity: 1;
   }
+
+  li {
+    font-size: 1.45rem;
+    line-height: 1.5em;
+
+    a {
+      margin-left: -1.125em;
+      transition: all .3s ease;
+      -webkit-transition: all .3s ease;
+
+      &:before {
+          content: '-> ';
+          opacity: 0;
+          transition: all .3s ease;
+          -webkit-transition: all .3s ease;
+          width: 1.125em;
+          display: inline-block;
+          overflow: hidden;
+          line-height: .75;
+      }
+
+      &:hover {
+        margin-left: 0;
+
+        &:before {
+            content: '->  ';
+            opacity: .6;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+            width: 1.125em;
+            display: inline-block;
+            overflow: hidden;
+            line-height: .75;
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
 
