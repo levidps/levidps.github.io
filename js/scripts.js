@@ -6,24 +6,28 @@ function social() {
     });
 }
 
+// Navigation
+function about() {
+    $('#about').click(function() {
+        $('#aboutSection').fadeToggle(400);
+    });
+}
 
 // Cheeky face animation
 var faces = ['^_^', '^_-', '^_^', '^_^', '>_<'],
-    text = ['happy', 'cheeky', 'happy', 'happy', 'dead'],
-    i     = 0;
+    text  = ['beautiful', 'sexy', 'bae', 'adj.', 'punk', 'human'],
+    i     = 0,
+    t     = Math.floor(Math.random() * 6) + 1 ;
 
 function transition() {
 
     if (i == faces.length - 1) {
         $('.face h1').html(faces[i]);
-        $('.face p').html(text[i]);
          i = 0;
     } else {
         $('.face h1').html(faces[i]);
-        $('.face p').html(text[i]);
          i++;
     }
-
 
 }
 
@@ -32,6 +36,8 @@ function transition() {
 $(document).ready(function() {
 
     social();
+    about();
+    $('.face p').html(text[t]);
 
     setInterval(transition, 550);
 

@@ -71,6 +71,18 @@
   .active & {
     visibility: visible;
     opacity: 1;
+
+    a {
+      color: white;
+    }
+
+    &:before {
+      content: ' ';
+      width: 100%;
+      display: block;
+      opacity: 1;
+    }
+
   }
 
   li {
@@ -81,6 +93,7 @@
       margin-left: -1.125em;
       transition: all .3s ease;
       -webkit-transition: all .3s ease;
+      color: black;
 
       &:before {
           content: '-> ';
@@ -113,10 +126,65 @@
 
   }
 
+  &:before {
+    height: 140vh;
+    width: 0%;
+    content: ' ';
+    display: block;
+    transition: opacity 1s ease, width .3s ease;
+    transform: rotate(10deg);
+    opacity: 0;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: -24vh;
+    z-index: -1;
+    left: -10%;
+  }
+
 }
 
+body {
+  transition: all .3s ease;
+  &.active {
+    color: white;
+  }
+}
 
-.active {
-  background-color: black;
-  color: white;
+p {
+    font-family: $base-text-family;
+    font-size: .85rem;
+    letter-spacing: .02em;
+    margin: 0;
+    line-height: 1em;
+}
+
+ol {
+  margin: 0;
+
+  li {
+    list-style: none;
+
+    p {
+      display: inline-block;
+    }
+
+    &:after {
+      content: '}';
+      display: inline-block;
+      font-family: $base-font-family;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-left: .325em;
+    }
+
+    &:before {
+      content: '{';
+      display: inline-block;
+      font-family: $base-font-family;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-right: .325em;
+    }
+  }
 }

@@ -5,24 +5,32 @@
 
 @font-face {
     font-family: 'inconsolata';
-    src: url('fonts/inconsolata-regular.woff2') format('woff2'),
-         url('fonts/inconsolata-regular.woff') format('woff');
+    src: url('../fonts/inconsolata-regular.woff2') format('woff2'),
+         url('../fonts/inconsolata-regular.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'inconsolata';
-    src: url('fonts/inconsolata-Bold.woff2') format('woff2'),
-         url('fonts/inconsolata-Bold.woff') format('woff');
+    src: url('../fonts/inconsolata-Bold.woff2') format('woff2'),
+         url('../fonts/inconsolata-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Scope';
+    src: url('../fonts/ScopeOne-Regular.woff2') format('woff2'),
+         url('../fonts/ScopeOne-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
 
 
 // Our variables
 $base-font-family: "inconsolata", Helvetica, Arial, sans-serif;
+$base-text-family: "Scope", Georgia, Monospace, serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
