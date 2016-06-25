@@ -2,8 +2,8 @@
 
   <div class="wrapper">
 
-    <h1 class="logo">@levidps</h1>
-
+    <div class="logo-wrapper">
+      <h1 class="logo">@levidps</h1>
       <ul class="social-media-list">
         <li>
           <a href="http://www.instagram.com/levidps" target="_blank">insta</a>
@@ -17,6 +17,7 @@
           <a href="http://www.linkedin.com/in/levidps" target="_blank">linked</a>
         </li>
       </ul>
+    </div>
 
 
     <nav class="site-nav">
@@ -24,12 +25,8 @@
       </a>
 
       <div class="trigger">
-          <a class="page-link" id="about">About</a>
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
+          <a class="page-link" data-id="about">About</a>
+          <a class="page-link" data-id="work">Work</a>
       </div>
     </nav>
 

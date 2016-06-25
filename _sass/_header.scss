@@ -1,0 +1,126 @@
+/*****************************
+	HEADER STYLES
+*****************************/
+
+.logo-wrapper {
+
+  max-width: 100px;
+  float: left;
+
+  .logo {
+    font-size: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+
+}
+
+
+.site-nav {
+  position: relative;
+  z-index: 100;
+  font-family: $base-font-family;
+  font-weight: 700;
+  text-transform: lowercase;
+
+  .page-link {
+    position: relative;
+    font-size: 1.125rem;
+    color: inherit;
+
+    &:after {
+      content: ' ';
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid;
+      position: absolute;
+      bottom: .125em;
+      transition: all .2s ease;
+      opacity: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:after {
+        bottom: -.25em;
+        opacity: 1;
+      }
+
+    }
+
+    &.visible {
+
+      &:after {
+        bottom: -.25em;
+        opacity: .3;
+      }
+
+    }
+
+  }
+
+}
+
+
+.social-media-list {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+
+  .active & {
+    visibility: visible;
+    opacity: 1;
+
+    a {
+      color: white;
+    }
+
+  }
+
+  li {
+    font-size: 1.125rem;
+    line-height: 1.5em;
+
+    a {
+      margin-left: -1.125em;
+      transition: all .3s ease;
+      -webkit-transition: all .3s ease;
+      color: black;
+
+      &:before {
+          content: '-> ';
+          opacity: 0;
+          transition: all .3s ease;
+          -webkit-transition: all .3s ease;
+          width: 1.125em;
+          display: inline-block;
+          overflow: hidden;
+          line-height: .75;
+      }
+
+      &:hover {
+        margin-left: 0;
+
+        &:before {
+            content: '->  ';
+            opacity: .6;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+            width: 1.125em;
+            display: inline-block;
+            overflow: hidden;
+            line-height: .75;
+        }
+
+      }
+
+    }
+
+  }
+
+}

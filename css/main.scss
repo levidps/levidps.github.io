@@ -20,19 +20,31 @@
 }
 
 @font-face {
-    font-family: 'Scope';
-    src: url('../fonts/ScopeOne-Regular.woff2') format('woff2'),
-         url('../fonts/ScopeOne-Regular.woff') format('woff');
+    font-family: 'Maitree';
+    src: url('../fonts/Maitree-Light.woff') format('woff2'),
+         url('../fonts/Maitree-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Maitree';
+    src: url('../fonts/Maitree-Regular.woff') format('woff2'),
+         url('../fonts/Maitree-Regular.woff') format('woff');
     font-weight: 300;
+}
+@font-face {
+    font-family: 'Maitree';
+    src: url('../fonts/Maitree-SemiBold.woff') format('woff2'),
+         url('../fonts/Maitree-SemiBold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
 }
 
-
 // Our variables
 $base-font-family: "inconsolata", Helvetica, Arial, sans-serif;
-$base-text-family: "Scope", Georgia, Monospace, serif;
+$base-text-family: "Maitree", Georgia, Monospace, serif;
 $base-font-size:   16px;
-$base-font-weight: 400;
+$base-font-weight: 200;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -49,8 +61,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    100%;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm:          640px;
+$on-laptop:        960px;
 
 
 

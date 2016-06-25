@@ -8,16 +8,20 @@ function social() {
 
 // Navigation
 function about() {
-    $('#about').click(function() {
-        $('#aboutSection').fadeToggle(400);
+    $('.page-link').click(function() {
+        var id = $(this).attr('data-id');
+
+        $(this).toggleClass('visible');
+        $('#' + id ).toggleClass('visible');
     });
 }
 
 // Cheeky face animation
 var faces = ['^_^', '^_-', '^_^', '^_^', '>_<'],
+    greet = ["'sup", "Hello,", 'Greetings,', 'Aloha', "Beunos dias"]
     text  = ['beautiful', 'sexy', 'bae', 'adj.', 'punk', 'human'],
     i     = 0,
-    t     = Math.floor(Math.random() * 6) + 1 ;
+    t     = Math.floor(Math.random() * 6) ;
 
 function transition() {
 

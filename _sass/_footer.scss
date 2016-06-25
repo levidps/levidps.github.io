@@ -1,0 +1,19 @@
+/*****************************
+	FOOTER STYLES
+*****************************/
+
+.site-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	.footer-col {
+
+		&:last-child {
+			float: right;
+			text-align: right;
+		}
+
+	}
+
+}
