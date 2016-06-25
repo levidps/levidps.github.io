@@ -1,7 +1,7 @@
 
 // Header logo (display social links )
 function social() {
-    $('.logo').click(function() {
+    $('.social-button').click(function() {
         $('body').toggleClass('active');
     });
 }

@@ -5,10 +5,9 @@
           
           {% if my_page.title %}
           <li>
-            <span>{{ my_page.random }}</span>
-            <h2>
-              <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-            </h2>
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
+              <h2>{{ my_page.title }}</h2>
+              <p>{{ my_page.date }}<br/> {{ my_page.studio }}</p>
           </li>
           {% endif %}
 

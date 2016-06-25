@@ -7,6 +7,20 @@
   max-width: 100px;
   float: left;
 
+  .social-button {
+    width: .25em;
+    font-family: $base-font-family;
+    word-break: break-word;
+    white-space: pre-wrap;
+    display: inline-block;
+    color: $brand-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+
   .logo {
     font-size: 2rem;
 
@@ -35,7 +49,7 @@
       content: ' ';
       display: block;
       width: 100%;
-      border-bottom: 2px solid;
+      border-bottom: 2px solid rgba($text-color, .8);
       position: absolute;
       bottom: .125em;
       transition: all .2s ease;
@@ -71,6 +85,8 @@
   opacity: 0;
   transition: all .3s ease;
   -webkit-transition: all .3s ease;
+  display: inline-block;
+  margin-left: 1em;
 
   .active & {
     visibility: visible;
@@ -94,6 +110,7 @@
 
       &:before {
           content: '-> ';
+          color: $brand-color;
           opacity: 0;
           transition: all .3s ease;
           -webkit-transition: all .3s ease;
@@ -104,7 +121,7 @@
       }
 
       &:hover {
-        margin-left: 0;
+        margin-left: -.5em;
 
         &:before {
             content: '->  ';
