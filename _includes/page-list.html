@@ -1,15 +1,25 @@
   <h1 class="page-heading">work</h1>
 
-    <ul class="page-list">
+    <ul class="page-list {{ page.layout }}">
         {% for my_page in site.pages %}
-          
-          {% if my_page.title %}
-          <li>
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
-              <h2>{{ my_page.title }}</h2>
-              <p>{{ my_page.date }}<br/> {{ my_page.studio }}</p>
-          </li>
+
+        {% if my_page.layout == 'project' %}
+
+          {% if page.title == my_page.title %}
+            {% continue %}
+          {% else %}
+
+            {% if my_page.title %}
+            <li>
+              <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
+                <h2>{{ my_page.title }}</h2>
+                <p>{{ my_page.date }}<br/> {{ my_page.studio }}</p>
+            </li>
+            {% endif %}
+
           {% endif %}
+
+        {% endif %}
 
 
         {% endfor %}

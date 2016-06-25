@@ -9,6 +9,11 @@ layout: default
 
   <div class="post-content">
     {{ content }}
+    {% if page.title == 'Portfolio Index' %}
+    {% else %}
+	    {% include page-list.html %}
+	{% endif %}
+
   </div>
 
 </article>

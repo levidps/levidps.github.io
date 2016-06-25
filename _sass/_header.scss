@@ -108,6 +108,10 @@
       -webkit-transition: all .3s ease;
       color: black;
 
+      &:after {
+        display: none;
+      }
+
       &:before {
           content: '-> ';
           color: $brand-color;
