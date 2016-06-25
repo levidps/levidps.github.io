@@ -18,10 +18,10 @@ function about() {
 
 // Cheeky face animation
 var faces = ['^_^', '^_-', '^_^', '^_^', '>_<'],
-    greet = ["'sup", "Hello,", 'Greetings,', 'Aloha', "Beunos dias"]
-    text  = ['beautiful', 'sexy', 'bae', 'adj.', 'punk', 'human', 'legend'],
+    greet = [ "Hello," , "'sup" , 'Aloha,' , "Beunos dias," , 'Greetings,' , 'Howdy,' ],
+    text  = [ 'beautiful' , 'sexy' , 'baby' , 'punk' , 'human' , 'legend' ],
     i     = 0,
-    t     = Math.floor(Math.random() * 8) ;
+    t     = Math.floor(Math.random() * 7) ;
 
 function transition() {
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     social();
     about();
-    $('.face h2').html(greed[t]);
+    $('.face h2').html(greet[t]);
     $('.face p').html(text[t]);
 
     setInterval(transition, 550);
