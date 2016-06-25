@@ -18,10 +18,10 @@ function about() {
 
 // Cheeky face animation
 var faces = ['^_^', '^_-', '^_^', '^_^', '>_<'],
-    greet = [ "Hello," , "'sup" , 'Aloha,' , "Beunos dias," , 'Greetings,' , 'Howdy,' ],
-    text  = [ 'beautiful' , 'sexy' , 'baby' , 'punk' , 'human' , 'legend' ],
+    greet = [ "'sup" , "Hello," , 'Aloha,' , "Beunos dias," , 'Greetings,' , 'Howdy,' ],
+    text  = [ 'sexy' , 'beautiful' , 'baby' , 'punk' , 'human' , 'legend' ],
     i     = 0,
-    t     = Math.floor(Math.random() * 7) ;
+    t     = Math.floor(Math.random() * 6) ;
 
 function transition() {
 
