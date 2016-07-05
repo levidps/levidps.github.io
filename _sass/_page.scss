@@ -150,6 +150,20 @@ a {
 
 }
 
+.code-wrapper {
+  padding: 1em;
+  background-color: rgba(white, .6);
+  border-radius: 5px;
+  margin-bottom: 1em;
+
+  a {
+    &:after {
+      display: none;
+    }
+  }
+
+}
+
 .face {
   max-width: calc(9rem * 3);
   margin: 0 auto;
