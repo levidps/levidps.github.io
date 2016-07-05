@@ -11,9 +11,10 @@
 
             {% if my_page.title %}
             <li>
-              <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
+              <a class="page-link" href="{{ my_page.url }}">
                 <h2>{{ my_page.title }}</h2>
                 <p>{{ my_page.date }}<br/> {{ my_page.studio }}</p>
+              </a>
             </li>
             {% endif %}
 
