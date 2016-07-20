@@ -4,15 +4,15 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'inconsolata';
-    src: url('../fonts/Inconsolata-Regular.woff') format('woff');
+    font-family: 'cabin';
+    src: url('../fonts/cabin-Regular.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'inconsolata';
-    src: url('../fonts/Inconsolata-Bold.woff') format('woff');
+    font-family: 'cabin';
+    src: url('../fonts/cabin-bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -39,7 +39,7 @@
 }
 
 // Our variables
-$base-font-family: "inconsolata", Helvetica, Arial, sans-serif;
+$base-font-family: "cabin", Helvetica, Arial, sans-serif;
 $base-text-family: "Maitree", Georgia, Monospace, serif;
 $base-font-size:   16px;
 $base-font-weight: 200;

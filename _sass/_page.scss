@@ -28,7 +28,7 @@ h1, h5 {
   font-weight: 700;
 }
 
-h3, h5, h6, p, li {
+h3, h5, h6, p, li, blockquote {
   font-family: $base-text-family;
   letter-spacing: .05em;
   font-weight: normal;
@@ -67,6 +67,13 @@ h6 {
   font-size: 1.125rem;
 }
 
+hr {
+  height: 2px;
+  border:none;
+  margin: $spacing-unit 0;
+  background-color: rgba( $brand-color, .4);
+}
+
 li {
   font-size: .85rem;
   margin-bottom: .25em;
@@ -75,18 +82,23 @@ li {
 blockquote {
   font-style: normal;
   border: none;
-  color: darken($brand-color, 5);
-  font-weight: bold;
   font-size: 2.5rem;
   letter-spacing: .025em;
+  color: $text-color;
+  line-height: 1.25em;
   padding: 0;
+  margin: ( $spacing-unit) auto;
 }
 
 p {
-  font-size: .85rem;
+  font-size: 1rem;
   letter-spacing: .02em;
-  margin-bottom: .25em;
-  line-height: 1em;
+  margin-bottom: .75em;
+  line-height: 1.25em;
+}
+
+strong {
+  font-family: $base-font-family;
 }
 
 ul {

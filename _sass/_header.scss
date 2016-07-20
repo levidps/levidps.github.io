@@ -23,8 +23,11 @@
 
   .logo {
     font-size: 2rem;
+    opacity: .1;
+    transition: all .3s ease;
 
     &:hover {
+      opacity: .4;
       cursor: pointer;
     }
 
