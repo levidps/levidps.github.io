@@ -121,6 +121,10 @@
 /**
  * Page content
  */
+.content {
+    margin-bottom: 8em;
+}
+
 .page-content {
     padding: $spacing-unit 0;
 }
@@ -156,6 +160,11 @@
 .post-header {
     margin:  5% auto;
     max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 71vh;
+    position: relative;
 }
 
 .post-title {

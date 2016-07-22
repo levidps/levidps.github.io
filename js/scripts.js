@@ -75,7 +75,6 @@ function transition() {
 
 }
 
-
 // Init scripts
 $(document).ready(function() {
 

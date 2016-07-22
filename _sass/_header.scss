@@ -1,9 +1,24 @@
 /*****************************
 	HEADER STYLES
 *****************************/
+.site-header {
+  background-color: $grey-color-light;
+  position: relative;
+
+  .wrapper {
+    background-color: $grey-color-light;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    padding-top: 2em;
+    border-bottom: 1px solid;
+    border-color: rgba(0,0,0,0);
+  }
+
+}
 
 .logo-wrapper {
-
   max-width: 100px;
   float: left;
 
@@ -25,6 +40,7 @@
     font-size: 2rem;
     opacity: .1;
     transition: all .3s ease;
+    line-height: 1em;
 
     &:hover {
       opacity: .4;

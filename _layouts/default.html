@@ -5,7 +5,6 @@
 
   <body class="{{ page.sluc }}">
 
-    <div class="container">
       {% include header.html %}
 
     <div class="wrapper">
@@ -15,8 +14,13 @@
     </div>
 
       {% include footer.html %}
-    </div>
 
   </body>
+
+  <script type="text/javascript" src="/js/skrollr.min.js"></script>
+
+  <script type="text/javascript">
+  var s = skrollr.init();
+  </script>
 
 </html>
