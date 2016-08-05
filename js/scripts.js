@@ -17,6 +17,7 @@ function pageLoad() {
             $('html,body').animate({scrollTop:0}, '600', 'swing');
             $('.content').fadeOut(600).queue( function() {
                 $(this).html( $(data).find('.content') ).dequeue();
+                s.refresh();
             }).fadeIn(500); // Pull the post we want out of the .content class.
 
                                                             // If you change the class of the post container,
@@ -26,6 +27,7 @@ function pageLoad() {
                                                         // remove that line.
 
             transition();
+
 
             $('.face h2').html(greet[t]);
             $('.face p').html(text[t]);
@@ -85,3 +87,12 @@ $(document).ready(function() {
     setInterval(transition, 550);
 
 });
+
+// Document Scroll
+$(window).scroll(function() {
+    if ( $(window).scrollTop() <= $(window).height() ) {
+        $('.post-header blockquote').css('margin-top', ($(window).scrollTop() * .325) + 'px' );
+        $('.post-header blockquote').css('opacity', 1 - ($(window).scrollTop() * .00125) );
+    }
+});
+

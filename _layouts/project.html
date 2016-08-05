@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="post">
 
-  <header class="post-header" data-top="opacity: 1;" data--250-top="opacity:0;">
+  <header class="post-header" data-top="opacity: 1;" data--350-top="opacity:0;">
       <h1>{{ page.title }}</h1>
       <blockquote>{{ page.quote }}</blockquote>
 
@@ -13,15 +13,20 @@ layout: default
 
   <div class="post-content">
 
-    <section class="project-details" data-bottom-top="opacity:0;" data--250-bottom="opacity:1;">
-
-        <p><strong>Studio</strong> {{ page.studio }}</p>
-        <p><strong>Skills</strong> {{ page.skills }}</p>
-        {% if page.link %}
-          <p><strong>Visit Site</strong> <a href="{{ page.link }}" target="_blank">{{ page.link }}</a></p>
-        {% endif %}
-        <p><strong>Description</strong> {{ page.description }}</p>
-
+    <section class="project-details" data-bottom-top="opacity:0;" data--350-bottom="opacity:1;">
+      <div class="inner-wrapper clearfix">
+        <div class="d-2">
+          <h4>{{ page.intro }} </h4>
+        </div>
+        <div class="d-2">
+          <p><strong>Studio</strong> {{ page.studio }}</p>
+          <p><strong>Skills</strong> {{ page.skills }}</p>
+          {% if page.link %}
+            <p><strong>Visit Site</strong> <a href="{{ page.link }}" target="_blank">{{ page.link }}</a></p>
+          {% endif %}
+          <p><strong>Description</strong> {{ page.description }}</p>
+        </div>
+      </div>
     </section>
 
     {{ content }}

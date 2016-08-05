@@ -55,9 +55,11 @@ h3 {
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 1.325rem;
+  font-family: $base-font-family;
+  font-weight: 200;
+  font-size: 1.25rem;
   margin-bottom: .5em;
+  line-height: 1.75em;
 }
 
 h5 {
@@ -236,9 +238,20 @@ a {
 
 }
 
+.d-2 {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
+
 .inner-wrapper {
-  display: table-cell;
-  vertical-align: middle;
+  max-width: $site-width;
+  margin: 0 auto;
+  @extend %clearfix;
 }
 
 .page-list {
