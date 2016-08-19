@@ -37,6 +37,27 @@ function pageLoad() {
 
 }
 
+// Detect scroll direction
+function scrollDirection() {
+    $(function(){
+        var lastScrollTop = 0, delta = 5;
+        $(window).scroll(function(event){
+           var st = $(this).scrollTop();
+           
+           if(Math.abs(lastScrollTop - st) <= delta)
+              return;
+           
+           if (st > lastScrollTop && $(window).scrollTop() >= 350){
+               // downscroll code
+               $('.site-header .wrapper').addClass('hidden');
+           } else {
+              // upscroll code
+              $('.site-header .wrapper').removeClass('hidden');
+           }
+           lastScrollTop = st;
+        });
+    });
+}
 
 // Header logo (display social links )
 function social() {
@@ -80,6 +101,7 @@ function transition() {
 // Init scripts
 $(document).ready(function() {
 
+    scrollDirection();
     pageLoad();
     social();
     about();
@@ -91,8 +113,8 @@ $(document).ready(function() {
 // Document Scroll
 $(window).scroll(function() {
     if ( $(window).scrollTop() <= $(window).height() ) {
-        $('.post-header blockquote').css('margin-top', ($(window).scrollTop() * .325) + 'px' );
-        $('.post-header blockquote').css('opacity', 1 - ($(window).scrollTop() * .00125) );
+        $('.post-header h1').css('margin-top', ($(window).scrollTop() * .325) + 'px' );
+        $('.post-header h1').css('opacity', 1 - ($(window).scrollTop() * .00125) );
     }
 });
 

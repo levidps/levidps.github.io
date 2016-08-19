@@ -1,13 +1,6 @@
 /**
  * Site header
  */
-.site-header {
-    min-height: 56px;
-    padding-top: 2em;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
 
 .site-title {
     font-size: 26px;
@@ -158,13 +151,33 @@
  * Posts
  */
 .post-header {
-    margin:  5% auto;
-    max-width: 1024px;
+    margin:  0 auto 4em;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    min-height: 71vh;
+    min-height: 80vh;
     position: relative;
+    border-bottom: 2px solid;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
+
+    .page-thumb {
+        position: absolute;
+        top: 0;
+        opacity: .5;
+        height: 50%;
+        width: auto;
+    }
+
+    .wrapper {
+        max-width: 1024px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
 }
 
 .post-title {
