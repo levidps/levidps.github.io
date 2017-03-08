@@ -9,13 +9,27 @@
     font-weight: 300;
     font-style: normal;
 }
-
 @font-face {
-    font-family: 'cabin';
-    src: url('../fonts/cabin-bold.woff') format('woff');
+    font-family: 'Vollkorn';
+    src: url('../fonts/Vollkorn-bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Fira';
+    src: url('../fonts/FiraMono-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Fira';
+    src: url('../fonts/FiraMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 @font-face {
     font-family: 'Maitree';
@@ -39,8 +53,8 @@
 }
 
 // Our variables
-$base-font-family: "cabin", Helvetica, Arial, sans-serif;
-$base-text-family: "Maitree", Georgia, Monospace, serif;
+$base-font-family: "Vollkorn", Helvetica, Arial, sans-serif;
+$base-text-family: "Fira", Georgia, Monospace, serif;
 $base-font-size:   16px;
 $base-font-weight: 200;
 $small-font-size:  $base-font-size * 0.875;
