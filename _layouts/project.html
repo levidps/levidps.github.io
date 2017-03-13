@@ -4,26 +4,52 @@ layout: default
 <article class="post">
 
   <header class="post-header" style="background-color: {{ page.bgcolor }}; color: {{ page.color }}; ">
-    <div class="wrapper" data-start="opacity: 1; transform: translate3d(0px, 0vh, 0px);" data-650-start="opacity: 0; transform: translate3d(0px, 15vh, 0px);">
+    <div class="wrapper">
       <h1>{{ page.title }}</h1>
-      <blockquote>{{ page.quote }}</blockquote>
+      <p>{{ page.quote }}</p>
     </div>
   </header>
 
-  <div class="post-content">
+  <div class="post-content wrapper">
 
-    <section class="project-details" data-bottom-top="opacity:0;" data--350-bottom="opacity:1;">
+    <section class="project-details">
       <div class="inner-wrapper clearfix">
-        <div class="d-2">
-          <h4>{{ page.intro }} </h4>
+
+        <!-- Project intro -->
+        <div>
+          <h4>Intro</h4>
+          <p>{{ page.description }}</p>
         </div>
-        <div class="d-2">
+
+        <!-- Gallery -->
+        {% if page.gallery %}
+          <div class="swiper-container">
+          <div class="swiper-wrapper">
+            {% for image in page.gallery %}
+            {% assign loopindex = forloop.index%}
+            <div class="swiper-slide">
+              <picture>
+                  <source srcset="../assets/640/{{ image[0] }}" media="(max-width: 640px)">
+                  <source srcset="../assets/1400/{{ image[0] }}" media="(min-width: 641px)">
+                  <img srcset="../assets/1400/{{ image[0] }}" alt="{{ image[1] }}">
+              </picture>
+            </div>
+            {% endfor %}
+          </div>
+            <div class="swiper-navigation">
+              <span class="swiper-button-prev"></span>
+              <span class="swiper-button-next"></span>
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- End credit stuff -->
+        <div>
           <p><strong>Studio</strong> {{ page.studio }}</p>
           <p><strong>Skills</strong> {{ page.skills }}</p>
           {% if page.link %}
             <p><strong>Visit Site</strong> <a href="{{ page.link }}" target="_blank">{{ page.link }}</a></p>
           {% endif %}
-          <p><strong>Description</strong> {{ page.description }}</p>
         </div>
       </div>
     </section>

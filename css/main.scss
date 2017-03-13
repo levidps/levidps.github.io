@@ -3,9 +3,13 @@
 ---
 @charset "utf-8";
 
+// Included libraries
+@import 'bourbon';
+@import 'megatype/megatype.scss';
+
 @font-face {
-    font-family: 'cabin';
-    src: url('../fonts/cabin-Regular.woff') format('woff');
+    font-family: 'Vollkorn';
+    src: url('../fonts/Vollkorn-Regular.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
@@ -15,7 +19,6 @@
     font-weight: 700;
     font-style: normal;
 }
-
 
 @font-face {
     font-family: 'Fira';
@@ -31,36 +34,16 @@
 }
 
 
-@font-face {
-    font-family: 'Maitree';
-    src: url('../fonts/Maitree-Light.woff') format('woff2'),
-         url('../fonts/Maitree-Light.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Maitree';
-    src: url('../fonts/Maitree-Regular.woff') format('woff2'),
-         url('../fonts/Maitree-Regular.woff') format('woff');
-    font-weight: 300;
-}
-@font-face {
-    font-family: 'Maitree';
-    src: url('../fonts/Maitree-SemiBold.woff') format('woff2'),
-         url('../fonts/Maitree-SemiBold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
 // Our variables
-$base-font-family: "Vollkorn", Helvetica, Arial, sans-serif;
-$base-text-family: "Fira", Georgia, Monospace, serif;
-$base-font-size:   16px;
+$base-font-family: "Fira", Georgia, Monospace, serif;
+$base-heading-family: "Vollkorn", Helvetica, Arial, sans-serif;
+$base-font-size:   14px;
 $base-font-weight: 200;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     2em;
+$button_size:      1em;
 
 $text-color:       #272E34;
 $background-color: #fdfdfd;
@@ -71,7 +54,7 @@ $grey-color:       darken($grey-color-light, 25%);
 $grey-color-dark:  darken($grey-color-light, 45%);
 
 // Width of the content area
-$content-width:    100%;
+$content-width:    1300px;
 $site-width:       1024px;
 
 $on-palm:          640px;
@@ -92,12 +75,11 @@ $on-laptop:        960px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
         "syntax-highlighting",
-        'page.scss'
+        'page',
+        'responsive'
 ;

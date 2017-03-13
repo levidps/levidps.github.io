@@ -4,14 +4,25 @@
 
 .site-footer {
 	width: 100%;
+	padding-top: $spacing-unit;
+	padding-bottom: $spacing-unit;
+	border-top: 1px solid rgba( $text-color, .3);
+	background-color: rgba(white, .4);
+	color: rgba( $text-color, .5);
 
-	.footer-col {
+	p {
+		font-size: .75rem;
+		line-height: 2;
 
-		&:last-child {
-			float: right;
-			text-align: right;
+		+ p {
+			margin-top: 0;
 		}
+	}
 
+	img {
+		width: 30px;
+		margin-right: $spacing-unit / 4;
+		margin-bottom: $spacing-unit / 2;
 	}
 
 }

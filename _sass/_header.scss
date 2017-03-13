@@ -3,24 +3,23 @@
 *****************************/
 .site-header {
   position: relative;
-  height: 0;
-  min-height: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  transition: all .5s ease;
+  padding-bottom: $spacing-unit;
+  padding-top: $spacing-unit;
+  background-color: rgba(235,235,235,.0);
+  opacity: 1;
 
-  .wrapper {
-    width: 100%;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    padding-top: 2em;
-    background-color: rgba(235,235,235,.0);
-    opacity: 1;
-    transition: all .5s ease;
+  .ui_internal & {
+    opacity: 0;
+    top: -75px;
+  }
 
-    &.hidden {
-      opacity: 0;
-      top: -75px;
-    }
-
+  .masthead_visible & {
+    background-color: rgba(235,235,235,.95);
   }
 
 }
@@ -29,28 +28,15 @@
   max-width: 100px;
   float: left;
 
-  .social-button {
-    width: .25em;
-    font-family: $base-font-family;
-    word-break: break-word;
-    white-space: pre-wrap;
-    display: inline-block;
-    color: $brand-color;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-  }
-
   .logo {
-    font-size: 2rem;
-    opacity: .1;
+    opacity: .4;
     transition: all .3s ease;
     line-height: 1em;
+    margin-bottom: 0;
+    top: 0;
 
     &:hover {
-      opacity: .4;
+      opacity: 1;
       cursor: pointer;
     }
 
@@ -60,114 +46,109 @@
 
 
 .site-nav {
+  float: right;
   position: relative;
   z-index: 100;
   font-family: $base-font-family;
   font-weight: 700;
   text-transform: lowercase;
 
-  .page-link {
-    position: relative;
-    font-size: 1.125rem;
-    color: inherit;
+  .active_nav & {
+    #menuToggle {
 
-    &:after {
-      content: ' ';
-      display: block;
-      width: 100%;
-      border-bottom: 2px solid rgba($text-color, .8);
-      position: absolute;
-      bottom: .125em;
-      transition: all .2s ease;
-      opacity: 0;
+      span {
+        @include transform( rotate(45deg) );
+        top: calc(50% - 1px);
+        bottom: auto;
+
+        &:last-of-type {
+          top: calc(50% - 1px);
+          bottom: auto;
+        }
+
+        &:first-of-type {
+          @include transform( rotate(-45deg) );
+        }
+      }
     }
+
+    .menu {
+      opacity: 1;
+      min-height: 100vh;
+      background-color: rgba( #fff, .95);
+      color: $text-color;
+      visibility: visible;
+
+      a {
+        transition: transform .3s ease, opacity .3s ease;
+        transition-delay: .5s;
+        opacity: 1;
+        @include transform( translateY(0) );
+      }
+    }
+  }
+
+  #menuToggle {
+    padding: 0;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    opacity: .4;
+    transition: opacity .3s;
+    z-index: 10;
 
     &:hover {
       cursor: pointer;
-
-      &:after {
-        bottom: -.25em;
-        opacity: 1;
-      }
-
+      opacity: 1;
     }
 
-    &.visible {
+    span {
+      position: absolute;
+      width: inherit;
+      height: 3px;
+      background-color: $text-color;
+      display: block;
+      top: 0;
+      transition: all .4s cubic-bezier(.13,.95,.4,1.09);
 
-      &:after {
-        bottom: -.25em;
-        opacity: .3;
+      &:last-of-type {
+        bottom: 0;
+        top: auto;
       }
 
+      &:nth-of-type(1) {
+        top: calc(50% - 2px);
+      }
     }
-
   }
 
 }
 
-
-.social-media-list {
+.menu {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
   visibility: hidden;
+  background-color: rgba( black, 0);
+  transition: opacity .3s ease;
   opacity: 0;
-  transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  display: inline-block;
-  margin-left: 1em;
+  text-align: center;
+  overflow: scroll;
+  @include display(flex);
+  @include flex-flow(row wrap);
+  @include align-items(center);
 
-  .active & {
-    visibility: visible;
-    opacity: 1;
-
-    a {
-      color: white;
-    }
-
+  a {
+    width: 100%;
+    font-size: 2rem;
+    opacity: 0;
+    transition: transform .1s ease, opacity .1s ease;
+    @include transform(translateY(10px));
   }
 
-  li {
-    font-size: 1.125rem;
-    line-height: 1.5em;
-
-    a {
-      margin-left: -1.125em;
-      transition: all .3s ease;
-      -webkit-transition: all .3s ease;
-      color: black;
-
-      &:after {
-        display: none;
-      }
-
-      &:before {
-          content: '-> ';
-          color: $brand-color;
-          opacity: 0;
-          transition: all .3s ease;
-          -webkit-transition: all .3s ease;
-          width: 1.125em;
-          display: inline-block;
-          overflow: hidden;
-          line-height: .75;
-      }
-
-      &:hover {
-        margin-left: -.5em;
-
-        &:before {
-            content: '->  ';
-            opacity: .6;
-            transition: all .3s ease;
-            -webkit-transition: all .3s ease;
-            width: 1.125em;
-            display: inline-block;
-            overflow: hidden;
-            line-height: .75;
-        }
-
-      }
-
-    }
-
+  .inner-wrapper {
+    transition: all .75s cubic-bezier(.13,.95,.4,1.09);
   }
-
 }

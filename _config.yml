@@ -3,7 +3,7 @@
 # 
 
 # Site settings
-title: Levi Schmidt - Digital Designer
+title: Levidps
 email: levidps@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Traditional design gone digital, embracing a world of self exploration and personal development.
@@ -13,6 +13,29 @@ url: "http://levischmidt.com" # the base hostname & protocol for your site
 # Included Gems
 gems:
   - bourbon
+  - jekyll-responsive-image
   
 # Build settings
 markdown: kramdown
+
+
+# config for responsive image shit
+responsive_image:
+  # [Required]
+  # Path to the image template.
+  template: _includes/responsive-image.html
+
+  default_quality: 100
+
+  sizes:
+    - width: 640  # [Required] How wide the resized image will be.
+      quality: 80 # [Optional] Overrides default_quality for this size.
+    - width: 1400
+      quality: 90
+
+  base_path: assets
+
+  output_path_format: assets/%{width}/%{basename}
+
+  extra_images:
+    - assets/aerium/*.{jpeg,jpg,png}
