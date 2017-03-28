@@ -113,8 +113,25 @@ jQuery( function($) {
             if (st > window.innerHeight ) {
                 document.body.classList.add('masthead_visible');
             } else {
+                $('.post-header .wrapper').css({
+                    transform: 'translateY(' + st * .325 + 'px)',
+                    opacity: 1 - (st * .0025),
+                });
                 document.body.classList.remove('masthead_visible');
             }
+
+            $('.js-animate').each( function() {
+                var top = $(this).offset().top;
+                var h = $(this).height();
+                var wh = window.innerHeight;
+
+                if ( top >= st && top + h <= st + wh ) {
+                    $(this).addClass('is_visible');
+                } else {
+                    $(this).removeClass('is_visible');
+                }
+            });
+
 
        });
     };
