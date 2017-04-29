@@ -113,23 +113,24 @@ jQuery( function($) {
             if (st > window.innerHeight ) {
                 document.body.classList.add('masthead_visible');
             } else {
+                $('.post-header .wrapper').css({
+                    transform: 'translateY(' + st * .325 + 'px)',
+                    opacity: 1 - (st * .0025),
+                });
                 document.body.classList.remove('masthead_visible');
             }
 
-            var jsAnimate = $('.js-animate');
-            var topPos = ( st + window.innerHeight );
+            $('.js-animate').each( function() {
+                var top = $(this).offset().top;
+                var h = $(this).height();
+                var wh = window.innerHeight;
 
-            jsAnimate.each( function() {
-                window.console.log('win height' + topPos);
-                window.console.log('top' + $(this).offset().top);
-                window.console.log('bottom' + $(this).offset().top + $(this).height() );
-                if ( $(this).offset().top >= topPos && $(this).offset().top + $(this).height() <= st ) {
+                if ( top >= st && top + h <= st + wh ) {
                     $(this).addClass('is_visible');
                 } else {
                     $(this).removeClass('is_visible');
                 }
             });
-
        });
     };
     // end scroll detection
