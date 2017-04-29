@@ -116,6 +116,20 @@ jQuery( function($) {
                 document.body.classList.remove('masthead_visible');
             }
 
+            var jsAnimate = $('.js-animate');
+            var topPos = ( st + window.innerHeight );
+
+            jsAnimate.each( function() {
+                window.console.log('win height' + topPos);
+                window.console.log('top' + $(this).offset().top);
+                window.console.log('bottom' + $(this).offset().top + $(this).height() );
+                if ( $(this).offset().top >= topPos && $(this).offset().top + $(this).height() <= st ) {
+                    $(this).addClass('is_visible');
+                } else {
+                    $(this).removeClass('is_visible');
+                }
+            });
+
        });
     };
     // end scroll detection
