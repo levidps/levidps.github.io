@@ -131,8 +131,6 @@ jQuery( function($) {
                     $(this).removeClass('is_visible');
                 }
             });
-
-
        });
     };
     // end scroll detection
